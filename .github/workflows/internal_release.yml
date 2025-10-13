@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout GIT
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Verify Commit Author
         id: verify_author
@@ -25,7 +25,7 @@ jobs:
           fi
 
       - name: Setup Java SDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'adopt'
           java-version: '18'
@@ -40,7 +40,7 @@ jobs:
       #----------------------------------------------------
 
       - name: Gradle cache
-        uses: gradle/actions/setup-gradle@v4
+        uses: gradle/actions/setup-gradle@v5
 
       # Decode Secrets for production build
       - name: Create JKS for prod signing
@@ -87,7 +87,7 @@ jobs:
 
     steps:
       - name: Checkout GIT
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # Fetch all history for all branches and tags
 
@@ -101,7 +101,7 @@ jobs:
           fi
 
       - name: Setup Java SDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: 'adopt'
           java-version: '18'
